@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fb ="http://schemas.android.com/apk/res-auto"
               android:orientation="vertical"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
         >
     <TextView
             android:layout_width="fill_parent"
@@ -17,7 +18,41 @@
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Button"
+            android:text="Call activity"
             android:id="@+id/startBtn" android:layout_gravity="center"/>
+    <TextView
+            android:layout_width="61dp"
+            android:layout_height="18dp"
+            android:text="Name "
+            android:id="@+id/txtView" android:layout_gravity="left|center_vertical"/>
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:id="@+id/txtName" android:layout_gravity="left|center_vertical" android:text="Not Yet"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tell Number"
+            android:id="@+id/textView" android:layout_gravity="left|center_vertical"/>
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:text="Not Yet"
+            android:id="@+id/txtNumber" android:layout_gravity="left|center_vertical"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set Info"
+            android:id="@+id/btnSetInfo" android:layout_gravity="right|center_vertical"/>
+
+    <com.facebook.widget.LoginButton
+        android:id="@+id/btn_facebook_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        fb:login_text="Login with Facebook"
+        fb:logout_text="Logout" />
+
 </LinearLayout>
 
