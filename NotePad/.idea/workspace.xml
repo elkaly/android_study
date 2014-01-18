@@ -23,7 +23,19 @@
     </layouts>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a66db62-dab1-4b2f-9d36-3d44ae486ce2" name="Default" comment="" />
+    <list default="true" id="5a66db62-dab1-4b2f-9d36-3d44ae486ce2" name="Default" comment="NotePad&#10;&#10;Test sqlite&#10;">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/NotePad/CustomAdaptor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/NotePad/CustomListData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/NotePad/DbAccess.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/custom_list.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/NotePad/EditPage.java" afterPath="$PROJECT_DIR$/src/com/example/NotePad/EditPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/NotePad/MyActivity.java" afterPath="$PROJECT_DIR$/src/com/example/NotePad/MyActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/edit_page.xml" afterPath="$PROJECT_DIR$/res/layout/edit_page.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="NotePad.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -86,66 +98,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-          <provider editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="285">
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit_page.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/edit_page.xml">
-          <provider editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EditPage.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/example/NotePad/EditPage.java">
+      <file leaf-file-name="DbAccess.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/NotePad/DbAccess.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="21" selection-start="449" selection-end="449" vertical-scroll-proportion="0.7702703" vertical-offset="0" max-vertical-offset="2325">
+            <state line="87" column="0" selection-start="2497" selection-end="2497" vertical-scroll-proportion="0.0" vertical-offset="1059" max-vertical-offset="1785">
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#694#1520#0" expanded="true" />
-                <element signature="e#1509#1510#0" expanded="true" />
+                <element signature="e#2281#2297#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ant.properties" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ant.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="local.properties" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/local.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -168,24 +127,83 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NotePad.iml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NotePad.iml">
+      <file leaf-file-name="MyActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/example/NotePad/MyActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="21" selection-start="259" selection-end="259" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="420">
+            <state line="52" column="53" selection-start="1436" selection-end="1446" vertical-scroll-proportion="0.48099172" vertical-offset="399" max-vertical-offset="1350">
+              <folding>
+                <element signature="e#677#693#0" expanded="true" />
+                <element signature="e#1157#1547#0" expanded="true" />
+                <element signature="e#1536#1537#0" expanded="true" />
+                <element signature="e#1589#1855#0" expanded="true" />
+                <element signature="e#1843#1844#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EditPage.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/NotePad/EditPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="41" selection-start="1214" selection-end="1214" vertical-scroll-proportion="0.0" vertical-offset="265" max-vertical-offset="975">
+              <folding>
+                <element signature="e#741#1640#0" expanded="true" />
+                <element signature="e#1629#1630#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomAdaptor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/NotePad/CustomAdaptor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="24" selection-start="521" selection-end="534" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/NotePad/MyActivity.java">
+      <file leaf-file-name="custom_list.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/custom_list.xml">
+          <provider editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="345">
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+          <provider editor-type-id="text-editor">
+            <state line="14" column="0" selection-start="609" selection-end="609" vertical-scroll-proportion="-8.4" vertical-offset="0" max-vertical-offset="360">
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit_page.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/edit_page.xml">
+          <provider editor-type-id="text-editor">
+            <state line="16" column="28" selection-start="647" selection-end="647" vertical-scroll-proportion="-9.6" vertical-offset="0" max-vertical-offset="360">
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomListData.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/NotePad/CustomListData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="50" selection-start="1219" selection-end="1242" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="810">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#558#824#0" expanded="true" />
-                <element signature="e#812#813#0" expanded="true" />
-              </folding>
+            <state line="6" column="26" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -197,23 +215,31 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/res/layout/edit_page.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/NotePad/MyActivity.java" />
         <option value="$PROJECT_DIR$/src/com/example/NotePad/EditPage.java" />
+        <option value="$PROJECT_DIR$/res/layout/main.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/NotePad/CustAdaptor.java" />
+        <option value="$PROJECT_DIR$/src/com/example/NotePad/ListData.java" />
+        <option value="$PROJECT_DIR$/src/com/example/NotePad/CustomListData.java" />
+        <option value="$PROJECT_DIR$/res/layout/custom_list.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/NotePad/CustomAdaptor.java" />
+        <option value="$PROJECT_DIR$/src/com/example/NotePad/DbAccess.java" />
+        <option value="$PROJECT_DIR$/src/com/example/NotePad/MyActivity.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1440" />
     <option name="y" value="22" />
-    <option name="width" value="1360" />
-    <option name="height" value="746" />
+    <option name="width" value="1920" />
+    <option name="height" value="988" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -247,9 +273,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope">
-        <subPane subId="Problems" />
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -324,6 +347,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Problems" />
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -339,7 +365,7 @@
     <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="options.lastSelected" value="preferences.pluginManager" />
+    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -655,15 +681,21 @@
       <workItem from="1388761228758" duration="385000" />
       <workItem from="1388761698327" duration="535000" />
       <workItem from="1388762873640" duration="2315000" />
-      <workItem from="1388824422086" duration="7450000" />
+      <workItem from="1388824422086" duration="7574000" />
+      <workItem from="1388848165352" duration="171000" />
+      <workItem from="1388883805569" duration="4312000" />
+      <workItem from="1389004496833" duration="1683000" />
+      <workItem from="1389008129777" duration="2754000" />
+      <workItem from="1389402596836" duration="3963000" />
+      <workItem from="1390050840745" duration="2572000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12614000" />
+    <option name="totallyTimeSpent" value="28193000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1440" y="22" width="1360" height="746" extended-state="6" />
+    <frame x="0" y="22" width="1920" height="988" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -681,15 +713,15 @@
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3301759" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37813884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2935268" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.175" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22304283" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14110756" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21986607" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -718,6 +750,59 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/ant.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proguard-project.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NotePad.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="21" selection-start="259" selection-end="259" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="420" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/NotePad/MyActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="50" selection-start="1219" selection-end="1242" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="810">
+          <folding>
+            <element signature="e#677#693#0" expanded="true" />
+            <element signature="e#1157#1547#0" expanded="true" />
+            <element signature="e#1536#1537#0" expanded="true" />
+            <element signature="e#1589#1855#0" expanded="true" />
+            <element signature="e#1843#1844#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
@@ -779,18 +864,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NotePad.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="21" selection-start="259" selection-end="259" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="420">
-          <folding />
-        </state>
+        <state line="6" column="21" selection-start="259" selection-end="259" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="420" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/NotePad/MyActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="1" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="300">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#558#824#0" expanded="true" />
-            <element signature="e#812#813#0" expanded="true" />
+            <element signature="e#677#693#0" expanded="true" />
+            <element signature="e#1157#1547#0" expanded="true" />
+            <element signature="e#1536#1537#0" expanded="true" />
+            <element signature="e#1589#1855#0" expanded="true" />
+            <element signature="e#1843#1844#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -835,9 +920,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NotePad.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
@@ -880,9 +963,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NotePad.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
@@ -969,9 +1050,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NotePad.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="21" selection-start="259" selection-end="259" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="420">
-          <folding />
-        </state>
+        <state line="6" column="21" selection-start="259" selection-end="259" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="420" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
@@ -983,35 +1062,17 @@
     </entry>
     <entry file="file://$USER_HOME$/Desktop/sdk/sources/android-18/android/widget/Button.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="13" selection-start="3805" selection-end="3805" vertical-scroll-proportion="0.33333334" vertical-offset="1010" max-vertical-offset="1635">
-          <folding />
-        </state>
+        <state line="96" column="13" selection-start="3805" selection-end="3805" vertical-scroll-proportion="0.33333334" vertical-offset="1010" max-vertical-offset="1635" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="285">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/NotePad/MyActivity.java">
+    <entry file="file://$USER_HOME$/Desktop/sdk/sources/android-18/android/database/sqlite/SQLiteDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="50" selection-start="1219" selection-end="1242" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="810">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#558#824#0" expanded="true" />
-            <element signature="e#812#813#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="1200" column="20" selection-start="51233" selection-end="51233" vertical-scroll-proportion="0.8558952" vertical-offset="16933" max-vertical-offset="32310" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/edit_page.xml">
       <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+        <state line="16" column="28" selection-start="647" selection-end="647" vertical-scroll-proportion="-9.6" vertical-offset="0" max-vertical-offset="360">
           <folding />
         </state>
       </provider>
@@ -1019,13 +1080,68 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/custom_list.xml">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="195">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+      <provider editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="609" selection-end="609" vertical-scroll-proportion="-8.4" vertical-offset="0" max-vertical-offset="360">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/NotePad/CustomAdaptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="24" selection-start="521" selection-end="534" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/NotePad/CustomListData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="26" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0" vertical-offset="53" max-vertical-offset="555">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/NotePad/EditPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="21" selection-start="449" selection-end="449" vertical-scroll-proportion="0.7702703" vertical-offset="0" max-vertical-offset="2325">
+        <state line="47" column="41" selection-start="1214" selection-end="1214" vertical-scroll-proportion="0.0" vertical-offset="265" max-vertical-offset="975">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#694#1520#0" expanded="true" />
-            <element signature="e#1509#1510#0" expanded="true" />
+            <element signature="e#741#1640#0" expanded="true" />
+            <element signature="e#1629#1630#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/NotePad/DbAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="0" selection-start="2497" selection-end="2497" vertical-scroll-proportion="0.0" vertical-offset="1059" max-vertical-offset="1785">
+          <folding>
+            <element signature="e#2281#2297#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/NotePad/MyActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="53" selection-start="1436" selection-end="1446" vertical-scroll-proportion="0.48099172" vertical-offset="399" max-vertical-offset="1350">
+          <folding>
+            <element signature="e#677#693#0" expanded="true" />
+            <element signature="e#1157#1547#0" expanded="true" />
+            <element signature="e#1536#1537#0" expanded="true" />
+            <element signature="e#1589#1855#0" expanded="true" />
+            <element signature="e#1843#1844#0" expanded="true" />
           </folding>
         </state>
       </provider>

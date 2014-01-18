@@ -15,5 +15,5 @@
             android:layout_height="fill_parent"
             android:inputType="textMultiLine"
             android:ems="10"
-            android:id="@+id/editText" android:textAlignment="textStart"/>
+            android:id="@+id/editText" android:textAlignment="textStart" android:gravity="top"/>
 </LinearLayout>

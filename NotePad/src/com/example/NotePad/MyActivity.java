@@ -4,10 +4,16 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
+import android.widget.*;
+
+import java.util.ArrayList;
 
 public class MyActivity extends Activity {
+
+    private ArrayList<String> list;
+    private ArrayAdapter<String> arrayAdapter;
+    private ListView listView;
+
     /**
      * Called when the activity is first created.
      */
@@ -16,8 +22,43 @@ public class MyActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
+        final DbAccess access = new DbAccess();
+
+        ArrayList<CustomListData> list = new ArrayList<CustomListData>();
+        CustomListData cData;
+
 
         Button newBtn = (Button)findViewById(R.id.newBtn);
+
+
+
+
+        //DB OPEN
+        access.openDataBase();
+
+        list = access.userCursor1();
+        CustomAdaptor cAdaptor = new CustomAdaptor(MyActivity.this, R.layout.custom_list, list);
+        listView = (ListView)findViewById(R.id.listView);
+
+        cAdaptor.notifyDataSetChanged();
+        listView.setAdapter(cAdaptor);
+
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //Toast.makeText(getApplicationContext(), "test", 1).show();
+
+
+                Intent intent = new Intent(MyActivity.this, EditPage.class);
+                startActivityForResult(intent, 100);
+
+            }
+        });
+
+
+
+
 
         newBtn.setOnClickListener(new View.OnClickListener(){
            @Override
@@ -45,4 +86,5 @@ public class MyActivity extends Activity {
        }
 
     }
+
 }

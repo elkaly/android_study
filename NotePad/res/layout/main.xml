@@ -9,5 +9,10 @@
             android:layout_height="wrap_content"
             android:text="New"
             android:id="@+id/newBtn" android:layout_gravity="right" android:width="150dp"/>
+    <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView" android:layout_gravity="top"
+            android:clickable="true" android:visibility="visible" android:choiceMode="singleChoice"/>
 </LinearLayout>
 
