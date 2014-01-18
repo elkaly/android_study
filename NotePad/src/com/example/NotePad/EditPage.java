@@ -26,8 +26,18 @@ public class EditPage extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.edit_page);
 
-        Button backBtn = (Button)findViewById(R.id.backBtn);
+        Intent intent = getIntent();
+        String pSeqNo = intent.getStringExtra("seqNo");
+        access.openDataBase();
+        String pContext = access.getContextBySeqNo(pSeqNo);
+        txtView = (TextView)findViewById(R.id.editText);
+        txtView.setText(pContext);
 
+
+        Toast.makeText(getApplicationContext(), pContext, 1).show();
+
+
+        Button backBtn = (Button)findViewById(R.id.backBtn);
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
