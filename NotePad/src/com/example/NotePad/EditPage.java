@@ -28,49 +28,49 @@ public class EditPage extends Activity {
 
         Intent intent = getIntent();
         String pSeqNo = intent.getStringExtra("seqNo");
-        access.openDataBase();
-        String pContext = access.getContextBySeqNo(pSeqNo);
-        txtView = (TextView)findViewById(R.id.editText);
-        txtView.setText(pContext);
 
 
-        Toast.makeText(getApplicationContext(), pContext, 1).show();
+        if(!"".equals(pSeqNo)){
+            try{
+                access.openDataBase();
+                access.makeDataTable();
 
+                String pContext = access.getContextBySeqNo(pSeqNo);
+                txtView = (TextView)findViewById(R.id.editText);
+                txtView.setText(pContext);
+
+                Toast.makeText(getApplicationContext(), pContext, 1).show();
+            }catch(Exception e){
+                Toast.makeText(getApplicationContext(), e.getMessage(),1).show();
+            }finally{
+                access.dbClose();
+            }
+        }
 
         Button backBtn = (Button)findViewById(R.id.backBtn);
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = getIntent();
                 Intent rtnIntent = new Intent();
-
                 txtView = (TextView)findViewById(R.id.editText);
 
                 //DB 저장
                 try{
-
                     access.openDataBase();
-                    access.dropTable();
+                    //Toast.makeText(getApplicationContext(), intent.getStringExtra("seqNo") + " " + txtView.getText().toString(),1).show();
+                    access.insertData( intent.getStringExtra("seqNo") ,txtView.getText().toString());
 
-                    access.makeDataTable();
-
-                    access.insertSomeDbData();
-                    access.userCursor1();
-
-                    db.close();
-
-
-                    //rtnIntent.putExtra("memo", txtView.getText().toString());
                     rtnIntent.putExtra("memo", "END");
 
-                    //setResult(RESULT_OK, rtnIntent);
+                    setResult(RESULT_OK, rtnIntent);
 
-                    //finish();
-
+                    finish();
                 }catch(Exception e){
                     Toast.makeText(getApplicationContext(), e.getMessage(),1).show();
+                }finally{
+                    access.dbClose();
                 }
-
             }
         });
     }

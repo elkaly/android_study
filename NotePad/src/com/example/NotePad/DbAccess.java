@@ -68,6 +68,33 @@ public class DbAccess {
         }
     }
 
+    protected void insertData(String key, String context){
+        String sql = "";
+        db.beginTransaction();
+
+        if("".equals(key)){
+            //Insert
+            sql = "INSERT INTO NOTE_MAST(LOCATION) VALUES(" + context + ");";
+        }else{
+            //Update
+            sql = "UPDATE NOTE_MAST SET LOCATION = '" + context + "' WHERE SEQ_NO = '" + key + "';";
+        }
+
+        System.out.println("SQL : =============== " + sql);
+
+        try{
+            db.execSQL(sql);
+            db.setTransactionSuccessful();
+
+        }catch(Exception e){
+            db.endTransaction();
+        }finally{
+
+        }
+
+
+    }
+
     protected void dropTable(){
         try{
             db.execSQL("drop table NOTE_MAST");
@@ -115,5 +142,51 @@ public class DbAccess {
         return list;
 
     }
+
+    protected void dbClose(){
+        db.close();
+    }
+
+
+    protected String getContextBySeqNo(String pSeqNo){
+        String returnValue = "";
+
+        System.out.println("SEQ_NO: " + pSeqNo);
+
+        try{
+            String[] columns = {"LOCATION"};
+            String[] seqNo = {pSeqNo};
+
+            //Cursor c = db.query("NOTE_MAST", columns, "SEQ_NO=?", seqNo, null, null, null);
+
+            Cursor c = db.rawQuery("SELECT LOCATION FROM NOTE_MAST WHERE SEQ_NO=" + pSeqNo, null);
+
+
+
+/*
+            Cursor cursor = db.query(TABLE_CONTACTS,
+                    new String[] { KEY_ID, KEY_NAME, KEY_PH_NO },
+                    KEY_ID + "=?",
+                    new String[] { String.valueOf(id) }, null, null, null, null);
+*/
+
+
+
+
+           int locationcol = c.getColumnIndex("location");
+
+            while(c.moveToNext()){
+               returnValue =  c.getString(locationcol);
+                System.out.println("RETURN VALUE : " + returnValue);
+            }
+
+        }catch(Exception e){
+            //Toast.makeText(getApplicationContext(), e.getMessage(),1).show();
+        }
+
+        return returnValue;
+
+    }
+
 
 }

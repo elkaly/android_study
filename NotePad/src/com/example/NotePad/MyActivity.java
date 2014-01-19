@@ -22,16 +22,27 @@ public class MyActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
+        setListView();
+
+        Button newBtn = (Button)findViewById(R.id.newBtn);
+        newBtn.setOnClickListener(new View.OnClickListener(){
+           @Override
+            public void onClick(View v){
+
+               //화면 띄우기
+               Intent intent = new Intent(MyActivity.this, EditPage.class);
+               startActivityForResult(intent, 100);
+           }
+
+        });
+    }
+
+
+    protected void setListView(){
         final DbAccess access = new DbAccess();
 
         ArrayList<CustomListData> list = new ArrayList<CustomListData>();
         CustomListData cData;
-
-
-        Button newBtn = (Button)findViewById(R.id.newBtn);
-
-
-
 
         //DB OPEN
         access.openDataBase();
@@ -47,29 +58,19 @@ public class MyActivity extends Activity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //Toast.makeText(getApplicationContext(), "test", 1).show();
 
+                CustomListData cData = (CustomListData)parent.getItemAtPosition(position);
+
+                //Toast.makeText(getApplicationContext(), cData.getText(), 1).show();
 
                 Intent intent = new Intent(MyActivity.this, EditPage.class);
+                intent.putExtra("seqNo", cData.getKey());
                 startActivityForResult(intent, 100);
 
             }
         });
 
 
-
-
-
-        newBtn.setOnClickListener(new View.OnClickListener(){
-           @Override
-            public void onClick(View v){
-
-               //화면 띄우기
-               Intent intent = new Intent(MyActivity.this, EditPage.class);
-               startActivityForResult(intent, 100);
-           }
-
-        });
     }
 
 
