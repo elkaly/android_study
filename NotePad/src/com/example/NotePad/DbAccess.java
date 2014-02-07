@@ -32,7 +32,16 @@ public class DbAccess {
 
         db.beginTransaction();
         try{
-            db.execSQL("CREATE TABLE IF NOT EXISTS NOTE_MAST(" + "SEQ_NO INTEGER PRIMARY KEY AUTOINCREMENT, time integer," + "location text);");
+            String query = "";
+            query += " CREATE TABLE IF NOT EXISTS TO_DO_MAST( ";
+            query += " SEQ_NO INTEGER PRIMARY KEY AUTOINCREMENT, ";
+            query += " TITLE TEXT, ";
+            query += " DUE_DATE TEXT, ";
+            query += " DUE_TIME TEXT, ";
+            query += " CONTEXT TEXT, ";
+            query += " CONFIRM TEXT );";
+            //db.execSQL("CREATE TABLE IF NOT EXISTS TO_DO_MAST( SEQ_NO INTEGER PRIMARY KEY AUTOINCREMENT, time integer, location text);"   );
+            db.execSQL(query);
             db.setTransactionSuccessful();
 
             //Toast.makeText(getApplicationContext(), "Table was created!",1).show();
@@ -51,9 +60,9 @@ public class DbAccess {
         db.beginTransaction();
 
         try{
-            db.execSQL("insert into NOTE_MAST(time,location)" + "values(1230,'test1');");
-            db.execSQL("insert into NOTE_MAST(time,location)" + "values(0200,'test2');");
-            db.execSQL("insert into NOTE_MAST(time,location)" + "values(0500,'test3');");
+            db.execSQL("insert into TO_DO_MAST(TITLE,DUE_DATE, DUE_TIME, CONTEXT, CONFIRM)" + "values('title1','20140210', '1730', 'CONTEXT1', 'N');");
+            db.execSQL("insert into TO_DO_MAST(TITLE,DUE_DATE, DUE_TIME, CONTEXT, CONFIRM)" + "values('title2','20140211', '1830', 'CONTEXT2', 'N');");
+            db.execSQL("insert into TO_DO_MAST(TITLE,DUE_DATE, DUE_TIME, CONTEXT, CONFIRM)" + "values('title3','20140212', '1930', 'CONTEXT3', 'N');");
 
             db.setTransactionSuccessful();
             //Toast.makeText(getApplicationContext(), "3 record were inserted!!",1).show();
@@ -74,10 +83,10 @@ public class DbAccess {
 
         if("".equals(key)){
             //Insert
-            sql = "INSERT INTO NOTE_MAST(LOCATION) VALUES(" + context + ");";
+            sql = "INSERT INTO TO_DO_MAST(CONTEXT) VALUES('" + context + "');";
         }else{
             //Update
-            sql = "UPDATE NOTE_MAST SET LOCATION = '" + context + "' WHERE SEQ_NO = '" + key + "';";
+            sql = "UPDATE TO_DO_MAST SET CONTEXT = '" + context + "' WHERE SEQ_NO = " + key + ";";
         }
 
         System.out.println("SQL : =============== " + sql);
@@ -87,8 +96,9 @@ public class DbAccess {
             db.setTransactionSuccessful();
 
         }catch(Exception e){
-            db.endTransaction();
+
         }finally{
+            db.endTransaction();
 
         }
 
@@ -97,7 +107,7 @@ public class DbAccess {
 
     protected void dropTable(){
         try{
-            db.execSQL("drop table NOTE_MAST");
+            db.execSQL("drop table TO_DO_MAST");
             //Toast.makeText(getApplicationContext(), "Table dropped",1).show();
         }catch(Exception e){
             //Toast.makeText(getApplicationContext(), e.getMessage(),1).show();
@@ -109,23 +119,34 @@ public class DbAccess {
         ArrayList<CustomListData> list = new ArrayList<CustomListData>();
         CustomListData cData;
 
+
+
         try{
-            String[] columns = {"SEQ_NO", "time", "location"};
-            Cursor c = db.query("NOTE_MAST", columns, null, null, null, null, "SEQ_NO");
+            String[] columns = {"SEQ_NO", "TITLE", "DUE_DATE", "DUE_TIME", "CONTEXT", "CONFIRM"};
+            Cursor c = db.query("TO_DO_MAST", columns, null, null, null, null, "SEQ_NO");
 
 
             int theTotal = c.getCount();
-            int seqNo = c.getColumnIndex("SEQ_NO");
-            int timecol = c.getColumnIndex("time");
-            int locationcol = c.getColumnIndex("location");
+            int seqNoCol = c.getColumnIndex("SEQ_NO");
+            int titleCol = c.getColumnIndex("TITLE");
+            int dueDateCol = c.getColumnIndex("DUE_DATE");
+            int dueTimeCol = c.getColumnIndex("DUE_TIME");
+            int contextCol = c.getColumnIndex("CONTEXT");
+            int confirmCol = c.getColumnIndex("CONFIRM");
 
 
             while(c.moveToNext()){
 
-                System.out.println("SEQNO: " + Integer.toString(c.getInt(seqNo)));
-                System.out.println("LOCATION: " + c.getString(locationcol));
+                System.out.println("SEQ NO : " + Integer.toString(c.getInt(seqNoCol)));
+                System.out.println("CONTEXT : " + c.getString(contextCol));
 
-                cData = new CustomListData(Integer.toString(c.getInt(seqNo)),c.getString(locationcol) );
+                cData = new CustomListData(Integer.toString(c.getInt(seqNoCol)),
+                                           c.getString(titleCol),
+                                           c.getString(dueDateCol),
+                                           c.getString(dueTimeCol),
+                                           c.getString(contextCol),
+                                           c.getString(confirmCol)
+                                          );
                 list.add(cData);
 
                 //columns[0] = Integer.toString(c.getInt(seqNo));
@@ -154,29 +175,19 @@ public class DbAccess {
         System.out.println("SEQ_NO: " + pSeqNo);
 
         try{
-            String[] columns = {"LOCATION"};
+            String[] columns = {"CONTEXT"};
             String[] seqNo = {pSeqNo};
 
             //Cursor c = db.query("NOTE_MAST", columns, "SEQ_NO=?", seqNo, null, null, null);
 
-            Cursor c = db.rawQuery("SELECT LOCATION FROM NOTE_MAST WHERE SEQ_NO=" + pSeqNo, null);
+            Cursor c = db.rawQuery("SELECT CONTEXT FROM TO_DO_MAST WHERE SEQ_NO=" + pSeqNo, null);
 
 
 
-/*
-            Cursor cursor = db.query(TABLE_CONTACTS,
-                    new String[] { KEY_ID, KEY_NAME, KEY_PH_NO },
-                    KEY_ID + "=?",
-                    new String[] { String.valueOf(id) }, null, null, null, null);
-*/
-
-
-
-
-           int locationcol = c.getColumnIndex("location");
+           int contextCol = c.getColumnIndex("CONTEXT");
 
             while(c.moveToNext()){
-               returnValue =  c.getString(locationcol);
+               returnValue =  c.getString(contextCol);
                 System.out.println("RETURN VALUE : " + returnValue);
             }
 

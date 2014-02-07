@@ -64,7 +64,7 @@ public class MyActivity extends Activity {
                 //Toast.makeText(getApplicationContext(), cData.getText(), 1).show();
 
                 Intent intent = new Intent(MyActivity.this, EditPage.class);
-                intent.putExtra("seqNo", cData.getKey());
+                intent.putExtra("seqNo", cData.getSeqNo());
                 startActivityForResult(intent, 100);
 
             }
@@ -85,6 +85,8 @@ public class MyActivity extends Activity {
             Toast.makeText(getApplicationContext(), rtnMemo, resultCode).show();
 
        }
+
+       setListView();
 
     }
 

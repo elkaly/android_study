@@ -41,11 +41,11 @@ public class CustomAdaptor extends ArrayAdapter<CustomListData> {
         CustomListData list = listData.get(position);
 
         if(main_str != null){
-          main_str.setText(list.getKey());
+          main_str.setText(list.getSeqNo());
         }
 
         if(sub_str != null){
-            sub_str.setText(list.getText());
+            sub_str.setText(list.getContext());
         }
 
 

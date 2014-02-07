@@ -58,18 +58,17 @@ public class EditPage extends Activity {
                 //DB 저장
                 try{
                     access.openDataBase();
-                    //Toast.makeText(getApplicationContext(), intent.getStringExtra("seqNo") + " " + txtView.getText().toString(),1).show();
                     access.insertData( intent.getStringExtra("seqNo") ,txtView.getText().toString());
 
-                    rtnIntent.putExtra("memo", "END");
-
-                    setResult(RESULT_OK, rtnIntent);
-
-                    finish();
                 }catch(Exception e){
                     Toast.makeText(getApplicationContext(), e.getMessage(),1).show();
                 }finally{
                     access.dbClose();
+
+                    rtnIntent.putExtra("memo", "END");
+                    setResult(RESULT_OK, rtnIntent);
+                    finish();
+
                 }
             }
         });
