@@ -45,7 +45,7 @@ public class CustomAdaptor extends ArrayAdapter<CustomListData> {
         }
 
         if(sub_str != null){
-            sub_str.setText(list.getContext());
+            sub_str.setText(list.getTitle());
         }
 
 

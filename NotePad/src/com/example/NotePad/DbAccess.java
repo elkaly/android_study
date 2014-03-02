@@ -22,14 +22,12 @@ public class DbAccess {
             //Toast.makeText(getApplicationContext(), "DB OPEN", 1).show();
 
         }catch(Exception e){
-            
+            System.out.println("**********************  openDataBase Error **************************");
         }
-
     }
 
 
     protected void makeDataTable(){
-
         db.beginTransaction();
         try{
             String query = "";
@@ -48,6 +46,9 @@ public class DbAccess {
 
         }catch(Exception e){
             //Toast.makeText(getApplicationContext(), e.getMessage(),1).show();
+
+            System.out.println("**********************  makeDataTable Error **************************");
+
         }
         finally{
             db.endTransaction();
@@ -77,16 +78,18 @@ public class DbAccess {
         }
     }
 
-    protected void insertData(String key, String context){
+    protected void insertData(String key, String title, String date, String time, String context, String confirm){
         String sql = "";
         db.beginTransaction();
 
-        if("".equals(key)){
+        if(key.isEmpty() || "".equals(key)  ){
             //Insert
-            sql = "INSERT INTO TO_DO_MAST(CONTEXT) VALUES('" + context + "');";
+            sql = "INSERT INTO TO_DO_MAST(TITLE, DUE_DATE, DUE_TIME, CONTEXT, CONFIRM) ";
+            sql += "VALUES('" + title + "', '"+date +"', '" + time + "', '" + context + "', '"+ confirm +"' );";
         }else{
             //Update
-            sql = "UPDATE TO_DO_MAST SET CONTEXT = '" + context + "' WHERE SEQ_NO = " + key + ";";
+            sql = "UPDATE TO_DO_MAST SET TITLE = '" + title +"' , DUE_DATE = '" +date + "' , DUE_TIME = '" + time + "' ,  CONTEXT = '" + context + "', CONFIRM = '" + confirm + "' ";
+            sql += "WHERE SEQ_NO = " + key + ";";
         }
 
         System.out.println("SQL : =============== " + sql);
@@ -169,8 +172,8 @@ public class DbAccess {
     }
 
 
-    protected String getContextBySeqNo(String pSeqNo){
-        String returnValue = "";
+    protected String[] getContextBySeqNo(String pSeqNo){
+        String[] returnValue = new String[10];
 
         System.out.println("SEQ_NO: " + pSeqNo);
 
@@ -180,15 +183,23 @@ public class DbAccess {
 
             //Cursor c = db.query("NOTE_MAST", columns, "SEQ_NO=?", seqNo, null, null, null);
 
-            Cursor c = db.rawQuery("SELECT CONTEXT FROM TO_DO_MAST WHERE SEQ_NO=" + pSeqNo, null);
+            Cursor c = db.rawQuery("SELECT TITLE, DUE_DATE, DUE_TIME, CONTEXT, CONFIRM FROM TO_DO_MAST WHERE SEQ_NO=" + pSeqNo, null);
 
 
+            int titleCol = c.getColumnIndex("TITLE");
+            int dueDateCol = c.getColumnIndex("DUE_DATE");
+            int dueTimeCol = c.getColumnIndex("DUE_TIME");
+            int contextCol = c.getColumnIndex("CONTEXT");
+            int confirmCol = c.getColumnIndex("CONFIRM");
 
-           int contextCol = c.getColumnIndex("CONTEXT");
 
             while(c.moveToNext()){
-               returnValue =  c.getString(contextCol);
-                System.out.println("RETURN VALUE : " + returnValue);
+                returnValue[0] = c.getString(titleCol);
+                returnValue[1] = c.getString(dueDateCol);
+                returnValue[2] = c.getString(dueTimeCol);
+                returnValue[3] = c.getString(contextCol);
+                returnValue[4] = c.getString(confirmCol);
+                System.out.println("RETURN VALUE : " + returnValue[0] + " " + returnValue[1] + " " + returnValue[2] + " ");
             }
 
         }catch(Exception e){

@@ -5,11 +5,69 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <Button
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="74dp" android:orientation="horizontal" android:layout_gravity="center">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CONFIRM"
+                android:id="@+id/textView4" android:layout_gravity="center"/>
+        <ToggleButton
+                android:layout_width="87dp"
+                android:layout_height="wrap_content"
+                android:text="New ToggleButton"
+                android:id="@+id/toggleButton" android:layout_marginRight="37dp" android:layout_gravity="center"
+                android:textOn="YES"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:id="@+id/backBtn" android:width="150dp" android:layout_gravity="center"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:layout_gravity="center">
+        <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="TITLE"
+                android:id="@+id/textView" android:layout_marginRight="-48dp"/>
+        <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTitle"/>
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="46dp">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DUE DATE"
+                android:id="@+id/textView3"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Input Date"
+                android:id="@+id/btnDate"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DUE TIME"
+                android:id="@+id/textView5"/>
+        <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Input Time"
+                android:id="@+id/btnTime"/>
+    </LinearLayout>
+    <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Back"
-            android:id="@+id/backBtn" android:width="150dp"/>
+            android:text="CONTENT"
+            android:id="@+id/textView2"/>
     <EditText
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"

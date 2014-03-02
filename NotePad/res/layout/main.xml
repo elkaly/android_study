@@ -7,6 +7,11 @@
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="NOFITY"
+            android:id="@+id/btnNoti"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="New"
             android:id="@+id/newBtn" android:layout_gravity="right" android:width="150dp"/>
     <ListView

@@ -1,12 +1,17 @@
 package com.example.NotePad;
 
-import android.app.Activity;
+import android.app.*;
+
+import android.app.Notification.Builder;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+
 
 public class MyActivity extends Activity {
 
@@ -35,7 +40,47 @@ public class MyActivity extends Activity {
            }
 
         });
+
+
+        Button btnNoti = (Button)findViewById(R.id.btnNoti);
+        btnNoti.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                /*
+                Notification.Builder notiBuilder = new Notification.Builder(getApplicationContext());
+                notiBuilder.setSmallIcon(android.R.drawable.presence_video_busy);
+                notiBuilder.setContentTitle("TITLE");
+                notiBuilder.setContentText("CONTEXT");
+
+                Notification noti = notiBuilder.build();
+
+                //------------------------------------------------------------------
+                // Notify
+                NotificationManager notiManager = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
+                notiManager.notify(0, noti);
+                */
+
+                // 알람 매니저에 등록할 인텐트를 만듬
+                Intent intent = new Intent(MyActivity.this, AlarmReceiver.class);
+                PendingIntent sender = PendingIntent.getBroadcast(MyActivity.this, 0, intent, 0);
+
+                // 알람을 받을 시간을 5초 뒤로 설정
+                Calendar calendar = Calendar.getInstance();
+                calendar.setTimeInMillis(System.currentTimeMillis());
+                calendar.add(Calendar.SECOND, 5);
+
+                // 알람 매니저에 알람을 등록
+                AlarmManager am = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+                am.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), sender);
+
+            }
+        });
+
+
     }
+
+
 
 
     protected void setListView(){
@@ -46,6 +91,9 @@ public class MyActivity extends Activity {
 
         //DB OPEN
         access.openDataBase();
+        access.makeDataTable();
+
+        //access.insertSomeDbData();
 
         list = access.userCursor1();
         CustomAdaptor cAdaptor = new CustomAdaptor(MyActivity.this, R.layout.custom_list, list);
@@ -58,7 +106,7 @@ public class MyActivity extends Activity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+                access.dbClose();
                 CustomListData cData = (CustomListData)parent.getItemAtPosition(position);
 
                 //Toast.makeText(getApplicationContext(), cData.getText(), 1).show();
